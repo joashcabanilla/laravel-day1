@@ -27,13 +27,14 @@ $(".userform").submit((e) => {
     let middlename = $("#middlename").val();
     let lastname = $("#lastname").val();
     let birthdate = $("#birthdate").val();
-    let address = $("#address").val();
-    let email = $("#email").val();
+    let password = $("#password").val();
+    let confirmpassword = $("#confirmpassword").val();
 
     firstname.length == 1 ? $(".error-text").text("Invalid Firstname") :
     middlename.length == 1 ? $(".error-text").text("Invalid Middlename") :
     lastname.length == 1 ? $(".error-text").text("Invalid Lastname") :
     today == birthdate || parseInt(birthdate.split("-")[0]) > 2004 ? $(".error-text").text("Required Age is 18yrs old above") :
+    password != confirmpassword ? $(".error-text").text("Password did not match") :
     alert("User Form Submitted");
 });
 
