@@ -1,0 +1,3 @@
+install laravel framework - composer global require laravel/installer
+
+create new project - laravel new laravel-test
